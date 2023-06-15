@@ -6,7 +6,9 @@ import post_office_management as pom
 class TestPostOfficeManagement(unittest.TestCase):
 
     def setUp(self):
+        # Read data from the CSV file
         self.data = pom.read_csv_file("post_office.csv")
+        # Create a test file for writing
         self.test_file = "test_post_office.csv"
         
         with open(self.test_file, 'w', newline='') as file:
@@ -16,15 +18,18 @@ class TestPostOfficeManagement(unittest.TestCase):
             csv_writer.writerows(self.data)
 
     def test_find_record_existing_record(self):
+        # Test finding an existing record by ID
         record = pom.find_record(self.data, 1)
         self.assertIsNotNone(record)
         self.assertEqual(record['name'], 'William')
 
     def test_find_record_non_existing_record(self):
+        # Test finding a non-existing record by ID
         record = pom.find_record(self.data, 9999)
         self.assertIsNone(record)
 
     def test_add_record(self):
+        # Test adding a new record
         new_record = {
             'id': len(self.data) + 1,
             'name': 'John',
@@ -42,6 +47,7 @@ class TestPostOfficeManagement(unittest.TestCase):
         self.assertEqual(added_record['name'], new_record['name'])
 
     def test_amend_record(self):
+        # Test amending an existing record
         record_id = 4
         new_name = "Jane Smith"
         new_age = 20
@@ -64,12 +70,14 @@ class TestPostOfficeManagement(unittest.TestCase):
         self.assertEqual(amended_record['email'], new_email)
 
     def test_delete_record(self):
+        # Test deleting a record by ID
         record_id = 1
         pom.delete_record(self.data, self.test_file, record_id)
         deleted_record = pom.find_record(self.data, record_id)
         self.assertIsNone(deleted_record)
 
     def tearDown(self):
+        # Remove the test file
         os.remove(self.test_file)
 
 if __name__ == '__main__':
