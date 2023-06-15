@@ -1,0 +1,14 @@
+id,name,age,street,city,postal_code,country,phone,email
+1,William,20,123 Main St,New York,10001,USA,5551234123,main@postoffice.com
+2,John,23,456 Elm St,Los Angeles,90001,USA,5555678234,john@example.com
+3,Alice,30,789 Oak St,San Francisco,94101,USA,5559012842,alice@example.com
+4,Gabriel,35,321 Pine St,Chicago,60601,USA,5553456234,michael@example.com
+5,Sarah,40,654 Maple St,Boston,02101,USA,5557890565,sarah@example.com
+6,David,45,987 Cedar St,Miami,33101,USA,5552345432,david@example.com
+7,Emily,50,210 Birch St,Dallas,75201,USA,5556789345,emily@example.com
+8,James,55,543 Walnut St,Houston,77001,USA,5550124323,james@example.com
+9,Olivia,60,876 Oak St,Seattle,98101,USA,5554562237,olivia@example.com
+10,William,65,109 Pine St,Denver,80201,USA,5558921301,william@example.com
+11,Sophia,70,432 Maple St,Phoenix,85001,USA,5552345345,sophia@example.com
+12,Kate,18,12 Street,City,1234,Japan,1234512342,kate@ex.com
+13,John Cena,26,York Street,Manhatten,6968,US,1234567890,hello@gmail.com
